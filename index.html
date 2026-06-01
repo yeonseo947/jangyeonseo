@@ -243,3 +243,511 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>진로 소개 - 음악가 (Music)</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "맑은 고딕", Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      padding-top: 70px; /* 고정 내비게이션 바를 위한 여백 */
+    }
+
+    header {
+      background-color: #5c4a92; /* 음악의 예술적 느낌을 주는 보라색 계열 변경 */
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    nav button {
+      border: none;
+      background-color: #f0ecf9;
+      padding: 12px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: #5c4a92;
+      color: white;
+    }
+
+    nav button.active {
+      background-color: #5c4a92;
+      color: white;
+    }
+
+    section {
+      display: none;
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #5c4a92;
+      border-bottom: 2px solid #5c4a92;
+      padding-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    ul {
+      line-height: 2;
+      font-size: 17px;
+    }
+
+    .image-box {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .image-box img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 15px;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 220px;
+      background-color: #f6f4fc;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #433273;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <button class="tab-button active" onclick="showTab('intro')">직업소개</button>
+    <button class="tab-button" onclick="showTab('work')">하는 일</button>
+    <button class="tab-button" onclick="showTab('ability')">필요한 능력</button>
+    <button class="tab-button" onclick="showTab('path')">되는 방법</button>
+    <button class="tab-button" onclick="showTab('future')">전망과 가치</button>
+  </nav>
+
+  <header>
+    <h1>음악가 (Musician)</h1>
+    <p>소리와 선율을 통해 사람들의 마음을 움직이고 세상을 아름답게 채우는 직업입니다.</p>
+  </header>
+
+  <section id="intro" class="active">
+    <h2>음악가란?</h2>
+    <p>
+      음악가는 악기 연주, 노래, 작곡, 편곡 등을 통해 예술적인 가치를 창조하는 사람입니다. 
+      단순히 소리를 만들어내는 것을 넘어, 자신의 감정과 메시지를 음악에 담아 청중에게 감동을 전하고, 
+      다양한 문화 콘텐츠의 핵심 요소를 만들어내는 예술가입니다.
+    </p>
+
+    <div class="image-box">
+      <img src="music.jpg" alt="음악가 이미지" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500'">
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>음악가가 하는 일</h2>
+    <ul>
+      <li>자신의 음악적 아이디어를 바탕으로 새로운 곡을 만드는 작곡 및 편곡 활동</li>
+      <li>독주, 합주, 오케스트라 등 다양한 형태로 악기를 연주하거나 노래하는 공연 활동</li>
+      <li>녹음 스튜디오에서 음반(앨범) 음원을 제작하고 프로듀싱하는 작업</li>
+      <li>영화, 드라마, 광고, 게임 등에 필요한 배경음악(OST) 및 효과음 제작</li>
+      <li>실용음악학원, 학교, 개인 레슨 등을 통해 후학을 양성하는 교육 활동</li>
+    </ul>
+  </section>
+
+  <section id="ability">
+    <h2>음악가에게 필요한 능력</h2>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>음악적 감각과 재능</h3>
+        <p>청음 능력, 리듬감, 음정 감각 등 음악을 이해하고 표현하는 타고난 감각이 중요합니다.</p>
+      </div>
+
+      <div class="card">
+        <h3>창의성과 표현력</h3>
+        <p>새로운 선율을 만들어내는 독창적인 아이디어와 감정을 음악으로 녹여내는 표현력이 필요합니다.</p>
+      </div>
+
+      <div class="card">
+        <h3>끈기와 인내심</h3>
+        <p>하나의 완성도 높은 곡이나 연주를 선보이기 위해 수없는 반복 연습과 창작의 고통을 견뎌내야 합니다.</p>
+      </div>
+
+      <div class="card">
+        <h3>트렌드 파악 능력</h3>
+        <p>대중이 좋아하는 음악적 트렌드를 파악하고 새로운 기술(MIDI, AI 작곡 툴)을 받아들이는 열정이 필요합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="path">
+    <h2>음악가가 되는 방법</h2>
+    <p>
+      음악가가 되기 위해서는 전공 학과(기악과, 성악과, 작곡과, 실용음악과 등)에 진학하여 전문적인 교육을 받거나, 
+      학원 및 독학을 통해 자신만의 음악적 실력을 쌓아 도약할 수 있습니다. 이후 오디션, 공모전, 개인 음원 발매 등을 통해 데뷔합니다.
+    </p>
+
+    <ul>
+      <li><strong>예술고등학교 및 대학 진학:</strong> 클래식, 국악, 실용음악 등 전공 학과 학위 취득</li>
+      <li><strong>오디션 및 공모전 참여:</strong> 기획사 오디션이나 작곡 대회 등을 통한 데뷔</li>
+      <li><strong>인디 및 개인 활동:</strong> 사운드클라우드, 유튜브, 개인 음원 유통 플랫폼을 통한 작품 공개</li>
+      <li><strong>자격증 취득 (교육 희망 시):</strong> 음악 실기교사, 문화예술교육사 자격증 등</li>
+    </ul>
+  </section>
+
+  <section id="future">
+    <h2>음악기의 전망과 가치</h2>
+    <p>
+      인공지능(AI)이 음악을 작곡하는 시대가 왔지만, 인간의 깊은 감정과 경험, 시대적 아픔과 기쁨을 온전히 공감하고 
+      표현하는 인간 음악가의 가치는 더욱 독보적이 될 것입니다. 
+      또한 영상 콘텐츠(유튜브, OTT, 게임, 메타버스) 시장이 폭발적으로 성장함에 따라 배경음악과 사운드 디자이너로서의 음악가의 수요는 앞으로도 계속 확대될 전망입니다.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 나의 진로 소개 웹사이트 - 음악가 편</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      // 모든 섹션 숨기기
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
+
+      // 모든 버튼의 active 클래스 제거
+      const buttons = document.querySelectorAll(".tab-button");
+      buttons.forEach(button => {
+        button.classList.remove("active");
+      });
+
+      // 선택된 섹션 보이기
+      document.getElementById(tabId).classList.add("active");
+
+      // 클릭된 버튼에 active 클래스 추가
+      event.currentTarget.classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>진로 소개 - 음악가 (Music)</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "맑은 고딕", Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      padding-top: 70px; /* 고정 내비게이션 바를 위한 여백 */
+    }
+
+    header {
+      background-color: #5c4a92; /* 음악의 예술적 느낌을 주는 보라색 계열 변경 */
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    nav button {
+      border: none;
+      background-color: #f0ecf9;
+      padding: 12px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: all 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: #5c4a92;
+      color: white;
+    }
+
+    nav button.active {
+      background-color: #5c4a92;
+      color: white;
+    }
+
+    section {
+      display: none;
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #5c4a92;
+      border-bottom: 2px solid #5c4a92;
+      padding-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    ul {
+      line-height: 2;
+      font-size: 17px;
+    }
+
+    .image-box {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .image-box img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 15px;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 220px;
+      background-color: #f6f4fc;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #433273;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <button class="tab-button active" onclick="showTab('intro')">직업소개</button>
+    <button class="tab-button" onclick="showTab('work')">하는 일</button>
+    <button class="tab-button" onclick="showTab('ability')">필요한 능력</button>
+    <button class="tab-button" onclick="showTab('path')">되는 방법</button>
+    <button class="tab-button" onclick="showTab('future')">전망과 가치</button>
+  </nav>
+
+  <header>
+    <h1>음악가 (Musician)</h1>
+    <p>소리와 선율을 통해 사람들의 마음을 움직이고 세상을 아름답게 채우는 직업입니다.</p>
+  </header>
+
+  <section id="intro" class="active">
+    <h2>음악가란?</h2>
+    <p>
+      음악가는 악기 연주, 노래, 작곡, 편곡 등을 통해 예술적인 가치를 창조하는 사람입니다. 
+      단순히 소리를 만들어내는 것을 넘어, 자신의 감정과 메시지를 음악에 담아 청중에게 감동을 전하고, 
+      다양한 문화 콘텐츠의 핵심 요소를 만들어내는 예술가입니다.
+    </p>
+
+    <div class="image-box">
+      <img src="music.jpg" alt="음악가 이미지" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500'">
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>음악가가 하는 일</h2>
+    <ul>
+      <li>자신의 음악적 아이디어를 바탕으로 새로운 곡을 만드는 작곡 및 편곡 활동</li>
+      <li>독주, 합주, 오케스트라 등 다양한 형태로 악기를 연주하거나 노래하는 공연 활동</li>
+      <li>녹음 스튜디오에서 음반(앨범) 음원을 제작하고 프로듀싱하는 작업</li>
+      <li>영화, 드라마, 광고, 게임 등에 필요한 배경음악(OST) 및 효과음 제작</li>
+      <li>실용음악학원, 학교, 개인 레슨 등을 통해 후학을 양성하는 교육 활동</li>
+    </ul>
+  </section>
+
+  <section id="ability">
+    <h2>음악가에게 필요한 능력</h2>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>음악적 감각과 재능</h3>
+        <p>청음 능력, 리듬감, 음정 감각 등 음악을 이해하고 표현하는 타고난 감각이 중요합니다.</p>
+      </div>
+
+      <div class="card">
+        <h3>창의성과 표현력</h3>
+        <p>새로운 선율을 만들어내는 독창적인 아이디어와 감정을 음악으로 녹여내는 표현력이 필요합니다.</p>
+      </div>
+
+      <div class="card">
+        <h3>끈기와 인내심</h3>
+        <p>하나의 완성도 높은 곡이나 연주를 선보이기 위해 수없는 반복 연습과 창작의 고통을 견뎌내야 합니다.</p>
+      </div>
+
+      <div class="card">
+        <h3>트렌드 파악 능력</h3>
+        <p>대중이 좋아하는 음악적 트렌드를 파악하고 새로운 기술(MIDI, AI 작곡 툴)을 받아들이는 열정이 필요합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="path">
+    <h2>음악가가 되는 방법</h2>
+    <p>
+      음악가가 되기 위해서는 전공 학과(기악과, 성악과, 작곡과, 실용음악과 등)에 진학하여 전문적인 교육을 받거나, 
+      학원 및 독학을 통해 자신만의 음악적 실력을 쌓아 도약할 수 있습니다. 이후 오디션, 공모전, 개인 음원 발매 등을 통해 데뷔합니다.
+    </p>
+
+    <ul>
+      <li><strong>예술고등학교 및 대학 진학:</strong> 클래식, 국악, 실용음악 등 전공 학과 학위 취득</li>
+      <li><strong>오디션 및 공모전 참여:</strong> 기획사 오디션이나 작곡 대회 등을 통한 데뷔</li>
+      <li><strong>인디 및 개인 활동:</strong> 사운드클라우드, 유튜브, 개인 음원 유통 플랫폼을 통한 작품 공개</li>
+      <li><strong>자격증 취득 (교육 희망 시):</strong> 음악 실기교사, 문화예술교육사 자격증 등</li>
+    </ul>
+  </section>
+
+  <section id="future">
+    <h2>음악기의 전망과 가치</h2>
+    <p>
+      인공지능(AI)이 음악을 작곡하는 시대가 왔지만, 인간의 깊은 감정과 경험, 시대적 아픔과 기쁨을 온전히 공감하고 
+      표현하는 인간 음악가의 가치는 더욱 독보적이 될 것입니다. 
+      또한 영상 콘텐츠(유튜브, OTT, 게임, 메타버스) 시장이 폭발적으로 성장함에 따라 배경음악과 사운드 디자이너로서의 음악가의 수요는 앞으로도 계속 확대될 전망입니다.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 나의 진로 소개 웹사이트 - 음악가 편</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      // 모든 섹션 숨기기
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
+
+      // 모든 버튼의 active 클래스 제거
+      const buttons = document.querySelectorAll(".tab-button");
+      buttons.forEach(button => {
+        button.classList.remove("active");
+      });
+
+      // 선택된 섹션 보이기
+      document.getElementById(tabId).classList.add("active");
+
+      // 클릭된 버튼에 active 클래스 추가
+      event.currentTarget.classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
